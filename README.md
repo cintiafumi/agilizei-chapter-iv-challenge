@@ -1,4 +1,3 @@
-
 # Chapter IV - Challenge 02
 
 Cypress automation testing of an [e-commerce](http://automationpractice.com) website.
@@ -34,9 +33,39 @@ Run Cypress:
   npx cypress open
 ```
 
-Delete boilerplate files and add a schema at `cypress.json` file:
+Delete boilerplate files and add a schema to the `cypress.json` file:
+
 ```json
 {
   "$schema": "https://on.cypress.io/cypress.schema.json"
 }
 ```
+
+Install Chance as dev dependency:
+
+```bash
+  npm install chance -D
+```
+
+Create a new test file `register.spec.js` to test the registration process.
+
+Add scripts commands to the `package.json` file:
+
+```json
+{
+  //...
+  "scripts": {
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run"
+  }
+  //...
+}
+```
+
+Run the headless test to record the video:
+
+```bash
+  npm run cy:run
+```
+
+<img src="./video.gif" alt="new user registration">
