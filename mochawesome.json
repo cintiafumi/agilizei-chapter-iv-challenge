@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-15T01:52:10.394Z",
+    "end": "2021-10-15T01:52:31.385Z",
+    "duration": 20991,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "38b1c3ea-8ed8-44f2-a3a9-bc270954398a",
+      "title": "",
+      "fullFile": "cypress/integration/register.spec.js",
+      "file": "cypress/integration/register.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "acaad056-390c-46bc-9682-9d758866cf62",
+          "title": "Register",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should register when fill in the form with the data and submit it",
+              "fullTitle": "Register should register when fill in the form with the data and submit it",
+              "timedOut": null,
+              "duration": 17307,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const firstName = chance.first();\nconst lastName = chance.last();\nconst email = chance.email();\ncy.visit('http://automationpractice.com');\ncy.get('.login').click();\ncy.get('#email_create').type(email);\ncy.get('#SubmitCreate').click();\ncy.get('input[value=2]').check();\ncy.get('#customer_firstname').type(firstName);\ncy.get('#customer_lastname').type(lastName);\ncy.get('#passwd').type('123456');\ncy.get('#days').select(chance.natural({\n  min: 1,\n  max: 28\n}));\ncy.get('#months').select(chance.month());\ncy.get('#years').select(chance.year({\n  min: 1950,\n  max: 2000\n}));\ncy.get('#firstname').type(firstName);\ncy.get('#lastname').type(lastName);\ncy.get('#address1').type(chance.address());\ncy.get('#city').type(chance.city());\ncy.get('#postcode').type(chance.zip());\ncy.get('#id_country').select('21');\ncy.get('#phone_mobile').type(chance.phone({\n  formatted: false,\n  mobile: true\n}));\ncy.get('#id_state').select(chance.natural({\n  min: 1,\n  max: 53\n}));\ncy.get('#submitAccount').click();\ncy.url().should('contain', 'my-account');\ncy.get('.logout').should('exist');\ncy.contains('My personal information').click();\ncy.url().should('contain', 'identity');\ncy.get('#firstname').should('contain.value', firstName);\ncy.get('#lastname').should('contain.value', lastName);\ncy.get('#email').should('contain.value', email);",
+              "err": {},
+              "uuid": "39ced987-9394-4f7e-a10a-077d03b4c3d9",
+              "parentUUID": "acaad056-390c-46bc-9682-9d758866cf62",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "39ced987-9394-4f7e-a10a-077d03b4c3d9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17307,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
