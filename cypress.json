@@ -1,4 +1,8 @@
 {
   "$schema": "https://on.cypress.io/cypress.schema.json",
-  "videoCompression": 32
+  "videoCompression": 32,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
 }
