@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-10-15T02:33:52.664Z",
-    "end": "2021-10-15T02:34:16.515Z",
-    "duration": 23851,
+    "start": "2021-10-15T02:37:46.853Z",
+    "end": "2021-10-15T02:38:07.357Z",
+    "duration": 20504,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "51ce93e9-0878-40aa-800a-c80722a02d9d",
+      "uuid": "6c7be17f-4d57-4876-80af-5d4933ed4f7e",
       "title": "",
       "fullFile": "cypress/integration/register.spec.js",
       "file": "cypress/integration/register.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dd0b120a-7a6d-42c2-81fa-c14c813e01ea",
+          "uuid": "a4ef617e-5d7b-4c5c-b5ba-161df27913d6",
           "title": "Register",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should register when fill in the form with the data and submit it",
               "fullTitle": "Register should register when fill in the form with the data and submit it",
               "timedOut": null,
-              "duration": 20095,
+              "duration": 17121,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const firstName = chance.first();\nconst lastName = chance.last();\nconst email = chance.email();\ncy.visit('http://automationpractice.com');\ncy.get('.login').click();\ncy.get('#email_create').type(email);\ncy.get('#SubmitCreate').click();\ncy.get('input[value=2]').check();\ncy.get('#customer_firstname').type(firstName);\ncy.get('#customer_lastname').type(lastName);\ncy.get('#passwd').type('123456');\ncy.get('#days').select(chance.natural({\n  min: 1,\n  max: 28\n}));\ncy.get('#months').select(chance.month());\ncy.get('#years').select(chance.year({\n  min: 1950,\n  max: 2000\n}));\ncy.get('#firstname').type(firstName);\ncy.get('#lastname').type(lastName);\ncy.get('#address1').type(chance.address());\ncy.get('#city').type(chance.city());\ncy.get('#postcode').type(chance.zip());\ncy.get('#id_country').select('21');\ncy.get('#phone_mobile').type(chance.phone({\n  formatted: false,\n  mobile: true\n}));\ncy.get('#id_state').select(chance.natural({\n  min: 1,\n  max: 53\n}));\ncy.get('#submitAccount').click();\ncy.url().should('contain', 'my-account');\ncy.get('.logout').should('exist');\ncy.contains('My personal information').click();\ncy.url().should('contain', 'identity');\ncy.get('#firstname').should('contain.value', firstName);\ncy.get('#lastname').should('contain.value', lastName);\ncy.get('#email').should('contain.value', email);",
               "err": {},
-              "uuid": "b41f7b78-2a9d-4268-b8df-35940e224d27",
-              "parentUUID": "dd0b120a-7a6d-42c2-81fa-c14c813e01ea",
+              "uuid": "8bb65d27-986a-4359-a29b-38fe306a2f47",
+              "parentUUID": "a4ef617e-5d7b-4c5c-b5ba-161df27913d6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b41f7b78-2a9d-4268-b8df-35940e224d27"
+            "8bb65d27-986a-4359-a29b-38fe306a2f47"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 20095,
+          "duration": 17121,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
